@@ -1,0 +1,49 @@
+http://stackoverflow.com/questions/18292155/include-doxygen-method-description-in-xcodes-autocomplete-popup
+
+git clone git://github.com/tomaz/appledoc.git
+sudo sh install-appledoc.sh 
+
+and then 
+
+/**
+description
+
+description
+
+@param var var description
+
+@return return description
+
+*/
+
+
+
+
+
+
+optional 1 :
+
+o to Project > Add Target “Documentation” and then Build phases > Add build phase > Add run script
+
+/usr/local/bin/appledoc \
+--project-name "MyProject" \
+--project-company "MyCompany" \
+--company-id "com.mydomain" \
+--output build \
+--docsetutil-path `xcode-select -print-path`/usr/bin/docsetutil \
+--create-docset \
+--install-docset \
+--create-html \
+--exit-threshold 2 \
+--no-repeat-first-par \
+MyProjectDir
+
+
+optional 2 :
+
+execute commend 
+
+appledoc -o ./doc --project-name <Your project Name> --project-company <Your Company Name> .
+
+
+

@@ -1,0 +1,20 @@
+/usr/local/bin/appledoc \
+--project-name "${PROJECT_NAME}" \
+--project-company "Simplicate" \
+--company-id "com.simplicate" \
+--output "~/Projects/Help/${PROJECT_NAME}" \
+--install-docset \
+--logformat xcode \
+--keep-undocumented-objects \
+--keep-undocumented-members \
+--keep-intermediate-files \
+--no-repeat-first-par \
+--no-warn-invalid-crossref \
+--merge-categories \
+--exit-threshold 2 \
+--docset-platform-family iphoneos \
+--ignore "*.m" \
+--include "${PROJECT_DIR}/${PROJECT_NAME}/Documentation/Images" \
+--ignore "LoadableCategory.h" \
+--index-desc "${PROJECT_DIR}/readme.markdown" \
+"${PROJECT_DIR}/${PROJECT_NAME}"
