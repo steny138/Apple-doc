@@ -1,6 +1,7 @@
 http://stackoverflow.com/questions/18292155/include-doxygen-method-description-in-xcodes-autocomplete-popup
 
 git clone git://github.com/tomaz/appledoc.git
+cd appledoc/
 sudo sh install-appledoc.sh 
 
 and then 
@@ -10,7 +11,7 @@ description
 
 description
 
-@param var var description
+@param var var_description
 
 @return return description
 
